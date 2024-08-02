@@ -1,0 +1,554 @@
+.home_bg_container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/image-53.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overall_container{
+    margin: 0 5%;
+}
+
+.welcome_text{
+    font-weight: 600;
+    font-size: 50px;
+    color: #ffffff;
+
+    @media(max-width:510px){
+        font-size: 30px;
+    }
+}
+
+.welcome_par{
+    margin-top: 2%;
+    color: #ffffff;
+}
+
+.overall_btn{
+    cursor: pointer;
+    margin-top: 2%;
+    padding: 2% 6%;
+    background-color: #FF8C38;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+
+    @media(max-width:510px){
+        padding: 3% 8%;
+    }
+}
+
+.overall_btn:hover{
+    background-color: #252525;
+}
+
+footer{
+    background-color: #252525;
+    color: #ffffff;
+    padding: 2% 0;
+    text-align: center;
+
+    @media(max-width:760px){
+      padding: 3% 0;
+    }
+
+    @media(max-width:530px){
+      padding: 4% 0;
+      font-size: 13px;
+    }
+}
+
+/* About */
+.about_hero_bg{
+    width: 100%;
+    height: 55vh;
+    background-image: url(../images/image-54.png);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about_hero_text{
+    margin: 3% 0;
+}
+
+.about_hero_head{
+    font-weight: 600;
+    font-size: 30px;
+
+    @media(max-width:500px){
+        font-size: 20px;
+    }
+}
+
+.about_hero_par{
+    margin-top: 2%;
+}
+
+/* Explore */
+.explore_our_vans{
+    background-image: url(../images/image-533.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+
+.explore_overlay{
+    background: linear-gradient(90deg, #FFCC8D, rgba(0, 0, 0, 0.534));
+    padding: 10% 5%;
+    border-radius: 20px;
+    margin: 5% 0;
+
+    @media(max-width:550px){
+        padding: 15% 5%;
+    }
+}
+
+.explore_btn{
+    cursor: pointer;
+    margin-top: 2%;
+    padding: 1.3% 4%;
+    background-color: #252525;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+
+    @media(max-width:800px){
+        padding: 2.5% 5%;
+    }
+
+    @media(max-width:540px){
+        padding: 3% 7%;
+    }
+}
+
+.explore_btn:hover{
+    background-color: #ffffff;
+    color: #252525;
+}
+
+.explore_vans_text{
+    font-weight: 600;
+    font-size: 20px;
+
+    @media(max-width:800px){
+        font-size: 17px;
+    }
+}
+
+
+/* Vans */
+.vans_head {
+    font-weight: 600;
+    font-size: 25px;
+    margin: 8% 0 3% 0;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab.active {
+    color: #fff;
+  }
+  
+  .vans_grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    margin-bottom: 15%;
+  
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 45%;
+    }
+  
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
+      gap: 1%;
+      margin-bottom: 95%;
+    }
+  }
+  
+  .van_container {
+    width: 100%;
+  }
+  
+  .van_img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .van_container:hover .van_img {
+    scale: 0.95;
+  }
+  
+  .van_details {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .van_type,
+  .van_price {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+  
+    @media (max-width: 850px) {
+      font-size: 15px;
+    }
+  }
+  
+  .van_duration {
+    color: #252525bd;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .van_type_simple {
+    border: none;
+    padding: 3%;
+    background-color: #e17654;
+    text-align: center;
+    width: 20%;
+    color: #ffffff;
+    border-radius: 5px;
+  
+    @media (max-width: 930px) {
+      width: 30%;
+    }
+  }
+  
+  .van_type_rugged {
+    border: none;
+    padding: 3%;
+    background-color: #115e59;
+    text-align: center;
+    width: 20%;
+    color: #ffffff;
+    border-radius: 5px;
+  
+    @media (max-width: 930px) {
+      width: 30%;
+    }
+  }
+  
+  .van_type_luxury {
+    border: none;
+    padding: 3%;
+    background-color: #252525;
+    text-align: center;
+    width: 20%;
+    color: #ffffff;
+    border-radius: 5px;
+  
+    @media (max-width: 930px) {
+      width: 30%;
+    }
+  }
+
+/* Van Details */
+.van-details-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.van-details-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.van-details-content {
+    text-align: center;
+}
+
+.van-details-type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.van-details-type_simple {
+    background-color: #E17654;
+}
+
+.van-details-type_rugged {
+    background-color: #115E59;
+}
+
+.van-details-type_luxury {
+    background-color: #252525;
+}
+
+.van-details-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.van-details-price {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.van-details-duration {
+    font-size: 16px;
+    color: #666;
+}
+
+.van-details-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.van-details-rent-button {
+    background-color: #FF8C38;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.van-details-rent-button:hover {
+    background-color: #e07a2d;
+}
+
+
+/* Sign In Page */
+.big_sign_in_container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.sign_in_container{
+  background-color: #FF8C38;
+  padding: 50px;
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(max-width:500px){
+    width: 80%;
+  }
+}
+
+.profile_head{
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.sign_in_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_in_form input[type="email"]{
+  padding: 5%;
+  margin: 10% 0;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_in_form input[type="password"]{
+  padding: 5%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;  
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_in_form input[type="text"]{
+  padding: 5%;
+  margin: 10% 0;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_in_form button{
+  border: none;
+  padding: 7% 20%;
+  background-color: #252525;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sign_in_form button:hover{
+  background-color: #ffffff;
+  color: #252525;
+}
+
+.already_have_account{
+  margin-top: 3%;
+  font-size: 14px;
+  color: #252525;
+}
+
+.already_have_account a{
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Sign Up */
+.big_sign_up_container{
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+
+.sign_up_container{
+  background-color: #FF8C38;
+  padding: 50px;
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(max-width:500px){
+    width: 80%;
+  }
+}
+
+.sign_up_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_up_form input[type="email"]{
+  padding: 5%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_up_form input[type="password"]{
+  padding: 5%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;  
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_up_form input[type="text"]{
+  padding: 5%;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 200%;
+  outline: none;
+
+  @media(max-width:700px){
+    width: 150%;
+  }
+
+  @media(max-width:500px){
+    width: 130%;
+  }
+
+}
+
+.sign_up_form button{
+  border: none;
+  padding: 7% 20%;
+  background-color: #252525;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sign_up_form button:hover{
+  background-color: #ffffff;
+  color: #252525;
+}
