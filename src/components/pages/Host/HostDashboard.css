@@ -1,0 +1,279 @@
+/* Host Nav */
+.active{
+  font-weight: 600;
+}
+
+.host_nav{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  position: sticky;
+  background-color: #FFF7ED;
+  padding: 2% 5%;
+  top: 0;
+  z-index: 2000;
+  transition: 0.5s ease-in-out;
+
+  @media(max-width:900px){
+      padding: 3% 5%;
+  }
+
+  @media(max-width:650px){
+      padding: 4% 5%;
+  }
+
+  @media(max-width:500px){
+      align-items: center;
+      padding: 5% 5%;
+  }
+
+  @media(max-width:400px){
+      padding: 6% 5%;
+  }
+}
+
+.titleLogo{
+  font-weight: 800;
+  font-size: 30px;
+  color: #252525;
+}
+
+.host_nav ul {
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+
+.host_nav ul li a{
+  color: #252525;
+  padding: 0 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.host_nav ul li a:hover{
+  color: rgba(0, 0, 0, 0.678);
+}
+
+/* HostDashboard */
+.car-rental-app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Dashboard Styles */
+.container{
+    padding: 20px;
+}
+.card{
+    background-color: #FDF3E6;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.pars{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+/* Vans List */
+.vanslist_container{
+  padding: 20px;
+}
+
+.vanslist_van{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vanslist_image{
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.vanslist_edit{
+  margin-left: auto;
+  color: #007BFF;
+}
+
+/* Income */
+/* Income.css */
+
+.income{
+  margin: 0 2%;
+}
+
+.income-wrapper {
+  padding: 20px;
+  background-color: #fff5e6;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.income-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.income-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.income-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.income-amount {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #FF8C00;
+  margin-bottom: 40px;
+}
+
+.chart-wrapper {
+  margin-bottom: 40px;
+}
+
+.transactions {
+  margin-top: 20px;
+}
+
+.transactions h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.transaction-item span {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+  /* Vans Styles */
+.vans_container{
+  margin: 0 5%;
+
+  h1{
+    margin-top: 5%;
+  }
+}
+
+.vans-list{
+
+  img{
+    width: 100px;
+    border-radius: 10px;
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    background-color: #FFF7ED;
+    padding: 1%;
+    margin-top: 2%;
+    border-radius: 10px;
+  }
+}
+
+.host_footer{
+  margin-top: 5%;
+}
+
+  /* Reviews Section */
+  .review-section {
+    padding: 3% 5%;
+    background-color: #fff;
+  }
+  .review-section h2{
+    margin-bottom: 3%;
+  }
+  .review-section h1{
+    margin: 3% 0;
+  }
+
+  .last-30-days {
+    font-size: 0.8em;
+    color: gray;
+  }
+  
+  .overall-rating h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+  }
+  
+  .star {
+    color: orange;
+    margin-left: 10px;
+  }
+  
+  .rating-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .bar {
+    background-color: #e0e0e0;
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 10px;
+    position: relative;
+  }
+  
+  .bar .filled {
+    background-color: orange;
+    height: 100%;
+  }
+
+  .bar .not_filled {
+    background-color: #ddd;
+    height: 100%;
+  }
+
+  .reviews{
+    margin-top: 4%;
+  }
+  
+  .review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-top: 3%;
+  }
+  
+  .review p:nth-child(1) {
+    color: orange;
+  }
+  
+  .review p:nth-child(2) {
+    margin-top: 2%;
+  }
+  
+  .review p:nth-child(3) {
+    margin-top: 1%;
+  }
+
+
+/*  */

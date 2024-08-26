@@ -20,7 +20,8 @@ const vans = [
   { id: 9, type: "Rugged", price: 70, img: van4, name: "Modest Explorer", description: "Rugged and durable, this version of the Modest Explorer is perfect for off-road adventures." }
 ];
 
-const VanDetails = () => {
+export const Vandetails = () => {
+
   const { id } = useParams();
   const van = vans.find(v => v.id === parseInt(id));
 
@@ -42,5 +43,3 @@ const VanDetails = () => {
     </div>
   );
 };
-
-export default VanDetails;

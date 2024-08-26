@@ -1,5 +1,4 @@
 import React from "react";
-// import aboutHomeBg from "../images/image-54.png"
 import "../pages/page.css"
 import {NavLink} from "react-router-dom";
 

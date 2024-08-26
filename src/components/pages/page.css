@@ -348,107 +348,6 @@ footer{
 
 
 /* Sign In Page */
-.big_sign_in_container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 90vh;
-}
-
-.sign_in_container{
-  background-color: #FF8C38;
-  padding: 50px;
-  border-radius: 20px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media(max-width:500px){
-    width: 80%;
-  }
-}
-
-.profile_head{
-  font-weight: 600;
-  font-size: 25px;
-  margin-bottom: 5%;
-  text-align: center;
-}
-
-.sign_in_form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sign_in_form input[type="email"]{
-  padding: 5%;
-  margin: 10% 0;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_in_form input[type="password"]{
-  padding: 5%;
-  margin-bottom: 10%;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;  
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_in_form input[type="text"]{
-  padding: 5%;
-  margin: 10% 0;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_in_form button{
-  border: none;
-  padding: 7% 20%;
-  background-color: #252525;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-
-.sign_in_form button:hover{
-  background-color: #ffffff;
-  color: #252525;
-}
-
 .already_have_account{
   margin-top: 3%;
   font-size: 14px;
@@ -457,98 +356,82 @@ footer{
 
 .already_have_account a{
   font-weight: 600;
-  color: #ffffff;
-}
-
-/* Sign Up */
-.big_sign_up_container{
-  display: flex;
-  justify-content: center;
-  margin: 5% 0;
-}
-
-.sign_up_container{
-  background-color: #FF8C38;
-  padding: 50px;
-  border-radius: 20px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media(max-width:500px){
-    width: 80%;
-  }
-}
-
-.sign_up_form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sign_up_form input[type="email"]{
-  padding: 5%;
-  margin-bottom: 10%;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_up_form input[type="password"]{
-  padding: 5%;
-  margin-bottom: 10%;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;  
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_up_form input[type="text"]{
-  padding: 5%;
-  margin-bottom: 10%;
-  border-radius: 5px;
-  width: 200%;
-  outline: none;
-
-  @media(max-width:700px){
-    width: 150%;
-  }
-
-  @media(max-width:500px){
-    width: 130%;
-  }
-
-}
-
-.sign_up_form button{
-  border: none;
-  padding: 7% 20%;
-  background-color: #252525;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
+  color: #FF8C38;
   transition: 0.5s ease-in-out;
 }
 
-.sign_up_form button:hover{
-  background-color: #ffffff;
-  color: #252525;
+.already_have_account a:hover{
+  color: #e07a2d;
+}
+
+.form_heading{
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+
+.form_sign_up {
+  max-width: 500px;
+  padding: 20px;
+  margin: 10% auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form_sign_up div {
+  margin-bottom: 15px;
+}
+
+.form_sign_up input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.form_sign_up span {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  text-align: left;
+}
+
+.form_sign_up button {
+  background-color: #FF8C38;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form_sign_up button:hover {
+  background-color: #d68145;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  i{
+    color: #252525;
+  }
 }
