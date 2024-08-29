@@ -25,7 +25,7 @@ export const Navbar = () =>{
                     <NavLink to="/vans">Vans</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/profile"><i class="fa-solid fa-user"></i></NavLink>
+                    <NavLink to="/profile"><i class="fa-solid fa-right-from-bracket"></i></NavLink>
                 </li>
             </ul>
         </nav>

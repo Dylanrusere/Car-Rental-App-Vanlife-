@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase"; // Import the Firebase auth instance
 import "../pages/page.css";
 
 export const Profile = () => {
@@ -12,14 +14,6 @@ export const Profile = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  // Array of valid credentials
-  const validCredentials = [
-    { email: "dylaneight01@gmail.com", password: "dylanEight" },
-    { email: "ennetymarketing@vanlife.co.zw", password: "ennetymarketing@vanlife02" },
-    { email: "dylandev@vanlife.co.zw", password: "dylanEight@vanlife0108" },
-    { email: "admin@vanlife.co.zw", password: "admin@vanlife01" }
-  ];
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -27,7 +21,7 @@ export const Profile = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = {};
 
@@ -46,15 +40,16 @@ export const Profile = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      const isValid = validCredentials.some(
-        (cred) => cred.email === formData.email.trim() && cred.password === formData.password.trim()
-      );
-
-      console.log('Validation Result:', isValid); // Debugging line
-      if (isValid) {
-        navigate("/HostDashboard");
-      } else {
-        navigate("/");
+      try {
+        await signInWithEmailAndPassword(auth, formData.email, formData.password);
+        navigate("/home"); // Navigate to the host dashboard upon successful login
+      } catch (error) {
+        console.error("Login failed:", error);
+        if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+          setErrors({ general: "Invalid email or password" });
+        } else {
+          setErrors({ general: "Failed to sign in. Please try again." });
+        }
       }
     }
   };
@@ -91,6 +86,7 @@ export const Profile = () => {
             </span>
             {errors.password && <span>{errors.password}</span>}
           </div>
+          {errors.general && <span className="general-error">{errors.general}</span>}
           <button type="submit">Sign In</button>
           <p className="already_have_account">Don't have an Account? <Link to="/Signup">Sign Up</Link></p>
         </form>
@@ -98,3 +94,4 @@ export const Profile = () => {
     </div>
   );
 };
+
