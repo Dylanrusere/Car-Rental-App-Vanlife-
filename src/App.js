@@ -5,6 +5,8 @@ import { About, Home, Vans, Signup, Profile, Vandetails } from "./components/pag
 import { HostDashboard } from "./components/pages/Host/HostDashboard";
 import { HostVans } from "./components/pages/Host/HostVans";
 import { HostReviews } from "./components/pages/Host/HostReviews";
+import { HostIncome } from "./components/pages/Host/HostIncome";
+import { HostVansDetails } from "./components/pages/Host/HostVansDetails";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route path="/vandetails" element={<Vandetails />} />
         <Route path="/hostdashboard" element={<HostDashboard />} />
         <Route path="/hostvans" element={<HostVans />} />
+        <Route path="/hostvansdetails" element={<HostVansDetails />} />
         <Route path="/hostreviews" element={<HostReviews />} />
+        <Route path="/hostincome" element={<HostIncome />} />
       </Routes>
     </div>
   );

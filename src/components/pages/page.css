@@ -23,6 +23,21 @@
     }
 }
 
+.hello{
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+
+  span{
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+  }
+
+  @media(max-width:510px){
+      font-size: 20px;
+  }
+}
+
 .welcome_par{
     margin-top: 2%;
     color: #ffffff;
@@ -439,3 +454,4 @@ footer{
 .general-error{
   margin-bottom: 3%;
 }
+

@@ -1,6 +1,8 @@
 import React from 'react';
 import './HostDashboard.css';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { HostNavbar } from './HostNavbar';
+
 
 const data = [
   { name: 'Ju', income: 2000 },
@@ -11,9 +13,12 @@ const data = [
   { name: 'De', income: 900 },
 ];
 
-export const HostVans = () => {
+export const HostIncome = () => {
   return (
-    <div className="income">
+    <div>
+      <HostNavbar />
+      <div className="income">
+      
       <h2>Income</h2>
       <p>Last 30 days</p>
       <h1>$2,260</h1>
@@ -43,6 +48,7 @@ export const HostVans = () => {
           <span>$980</span> <span>23/11/22</span>
         </div>
       </div>
+    </div>
     </div>
   );
 };

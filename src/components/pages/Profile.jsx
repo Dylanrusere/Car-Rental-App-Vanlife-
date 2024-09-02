@@ -40,9 +40,28 @@ export const Profile = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
+      // Define your host credentials
+      const hostCredentials = [
+        { email: 'dylan@vanlife.com', password: 'dylan@vanlifehost' },
+        { email: 'admin@vanlife.com', password: 'admin@vanlifehost' },
+        { email: 'host@vanlife.com', password: 'host@vanlifehost' }
+      ];
+
+      // Check if the provided credentials match any host credentials
+      const isHost = hostCredentials.some(
+        (credential) => 
+          credential.email === formData.email && 
+          credential.password === formData.password
+      );
+
       try {
         await signInWithEmailAndPassword(auth, formData.email, formData.password);
-        navigate("/home"); // Navigate to the host dashboard upon successful login
+
+        if (isHost) {
+          navigate("/hostdashboard"); // Redirect to HostDashboard for hosts
+        } else {
+          navigate("/home"); // Redirect to general user dashboard
+        }
       } catch (error) {
         console.error("Login failed:", error);
         if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
@@ -94,4 +113,3 @@ export const Profile = () => {
     </div>
   );
 };
-

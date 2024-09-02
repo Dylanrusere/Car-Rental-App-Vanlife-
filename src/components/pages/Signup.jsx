@@ -12,6 +12,8 @@ export const Signup = () => {
     });
 
     const [errors, setErrors] = useState({});
+    const [showPassword, setShowPassword] = useState(false); // State for password visibility
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State for confirm password visibility
     const navigate = useNavigate();
     const auth = getAuth(); // Get Firebase Auth instance
 
@@ -51,6 +53,7 @@ export const Signup = () => {
         if (Object.keys(validationErrors).length === 0) {
             try {
                 await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+                localStorage.setItem('username', formData.username); // Store username in local storage
                 navigate("/Profile"); // Redirect to Profile page after successful signup
             } catch (error) {
                 console.error("Error signing up:", error);
@@ -63,6 +66,14 @@ export const Signup = () => {
                 }
             }
         }
+    };
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const toggleShowConfirmPassword = () => {
+        setShowConfirmPassword(!showConfirmPassword);
     };
 
     return (
@@ -90,22 +101,30 @@ export const Signup = () => {
                         />
                         {errors.email && <span>{errors.email}</span>}
                     </div>
-                    <div>
+                    <div className="password-container">
                         <input
-                            type="password"
+                            type={showPassword ? "text" : "password"} // Toggle between text and password
                             name="password"
                             placeholder='Enter Your Password'
                             onChange={handleChange}
+                            className="password-input"
                         />
+                        <span onClick={toggleShowPassword} className="password-toggle-icon">
+                            {showPassword ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
+                        </span>
                         {errors.password && <span>{errors.password}</span>}
                     </div>
-                    <div>
+                    <div className="password-container">
                         <input
-                            type="password"
+                            type={showConfirmPassword ? "text" : "password"} // Toggle between text and password
                             name="confirmPassword"
                             placeholder='Confirm Password'
                             onChange={handleChange}
+                            className="password-input"
                         />
+                        <span onClick={toggleShowConfirmPassword} className="password-toggle-icon">
+                            {showConfirmPassword ? <i className="fas fa-eye-slash"></i> : <i className="fas fa-eye"></i>}
+                        </span>
                         {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
                     </div>
                     {errors.general && <span className="general-error">{errors.general}</span>}
